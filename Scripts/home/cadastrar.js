@@ -8,9 +8,6 @@ function onCadastrarClick() {
 
     if (Validar()) {
         var $txtNome = $('#txtNome');
-        var $txtTelefone = $('#txtTelefone');
-        var $txtEmail = $('#txtEmail');
-        var $txtDataNascimento = $('#txtDataNascimento');
         var $txtCep = $('#txtCep');
         var $txtEndereco = $('#txtEndereco');
         var $txtBairro = $('#txtBairro');
@@ -23,9 +20,6 @@ function onCadastrarClick() {
         var Cliente = {}; // === new Objct();
 
         Cliente.nome = $.trim($txtNome.val());
-        Cliente.telefone = $.trim($txtTelefone.val());
-        Cliente.email = $.trim($txtEmail.val());
-        Cliente.dataNascimento = $.trim($txtDataNascimento.val());
         Cliente.cep = $.trim($txtCep.val());
         Cliente.endereco = $.trim($txtEndereco.val());
         Cliente.bairro = $.trim($txtBairro.val());
@@ -69,21 +63,6 @@ function Validar() {
     if ($.trim($txtNome.val()) === '') {
         isValido = false;
         $txtNome.addClass('errorInput');
-    }
-
-    if ($.trim($txtTelefone.val()) === '') {
-        isValido = false;
-        $txtTelefone.addClass('errorInput');
-    }
-
-    if ($.trim($txtEmail.val()) === '') {
-        isValido = false;
-        $txtEmail.addClass('errorInput');
-    }
-
-    if ($.trim($txtDataNascimento.val()) === '') {
-        isValido = false;
-        $txtDataNascimento.addClass('errorInput');
     }
 
     if ($.trim($txtCep.val()) === '') {

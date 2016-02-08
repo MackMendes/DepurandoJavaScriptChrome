@@ -21,21 +21,6 @@ function ListarCliente() {
         tagsTbody += clientes[i].nome;
         tagsTbody += '</td>'
 
-        // Telefone
-        tagsTbody += '<td>'
-        tagsTbody += clientes[i].telefone;
-        tagsTbody += '</td>'
-
-        // Email
-        tagsTbody += '<td>'
-        tagsTbody += clientes[i].email;
-        tagsTbody += '</td>'
-
-        // Data Nascimento
-        tagsTbody += '<td>'
-        tagsTbody += clientes[i].dataNascimento;
-        tagsTbody += '</td>'
-
         // Endereco
         tagsTbody += '<td>'
         tagsTbody += clientes[i].endereco + ', nº' + clientes[i].numeroEndereco;
@@ -56,11 +41,6 @@ function ListarCliente() {
     var $tbodyClientes = $('#tbListaCliente').find('tbody');
     $tbodyClientes.html(tagsTbody);
 
-    $('tbody tr').mouseover(function () {
-        debugger;
-        var atributoIsAtivo = $(this).attr('isAtivo');
-        onClienteAtivoMouseOver(this, atributoIsAtivo);
-    });
 }
 
 // Função para Excluir o cliente dentro a listClientes (variável Global dentro do arquivo index.js
@@ -77,11 +57,4 @@ function onExcluirClienteClick(index) {
 
     // Listamos os cliente novamente
     ListarCliente();
-}
-
-// Função do MouseOver
-function onClienteAtivoMouseOver(domHtml, isAtivo) {
-    if (isAtivo === "false") {
-        domHtml.style.border = 'red 1px dashed';
-    }
 }
