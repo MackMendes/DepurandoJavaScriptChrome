@@ -17,7 +17,7 @@ function onCadastrarClick() {
         var $ckbAtivo = $('#ckbAtivo');
 
         // Declarando um objeto 
-        var Cliente = {}; // === new Objct();
+        var Cliente = {}; // === new Objct(); E criar um objeto assim "{}" é mais rápido que "new Object();"
 
         Cliente.nome = $.trim($txtNome.val());
         Cliente.cep = $.trim($txtCep.val());
@@ -30,7 +30,6 @@ function onCadastrarClick() {
 
         // *** Após criar o 3º Js (index.js) vamos adicionar a linha abaixo:
         // Adicionando Cliente na lista de Cliente, só que... esse JS esta acima do index.js. Então, vamos organizar a ordem...
-        // ** Falar sobre a forma de leitura do Navegador e a ordem interfere um com o outro...
         AdicionarCliente(Cliente);
 
         MensagemSucesso();
@@ -46,9 +45,6 @@ function onCadastrarClick() {
 
 function Validar() {
     var $txtNome = $('#txtNome');
-    var $txtTelefone = $('#txtTelefone');
-    var $txtEmail = $('#txtEmail');
-    var $txtDataNascimento = $('#txtDataNascimento');
     var $txtCep = $('#txtCep');
     var $ckbAtivo = $('#ckbAtivo');
 
@@ -116,11 +112,6 @@ function LimparCampos() {
     // Outra forma de buscar elementos com o Jquery, passando o nome do elemento e o tipo dele.
     // O Jquery vai buscar em toda a página elementos <input type="text"> e atribuir o valor em branco para todos.
     $('input[type="text"]').val('');
-
-    // Outra forma se buscar elemento na página com Jquery, é colocando vircula (,) e os elementos. O Jquery
-    // retorna uma lista de elementos, e sem ter que fazer um for para limpar todos, atribui o valor em branco 
-    // com o .val para todos de uma única vez.
-    $('input[type="tel"], input[type="email"], input[type="datetime"]').val('');
 
     // E atribuindo para todos os elemento dentro da página que seja do tipo checkbox a propriedade checked como false
     $('input[type="checkbox"]').prop('checked', false);
