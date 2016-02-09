@@ -1,4 +1,4 @@
-﻿// 2º JS
+// 2º JS
 
 // Aqui no JS cadastrar, vamos manipular o DOM para validar o cadastrado do cliente. E só mostrar a mensagem de sucesso se estiver tudo 
 // devidamente preenchido.
@@ -139,7 +139,7 @@ function GetEnderecoAjax(cep) {
         url: "http://api.postmon.com.br/v1/cep/" + cep,  // A URL da requisição
         dataType: "json",  // O tipo de Dado que você esta esperando voltar do servidor
         data: "", // Valor que vamos enviar para a requisição através da queryString, nesse exemplo não vamos utilizar
-        async: false, // Se a requisição vai ser assincrona (quando não esperado o resultado) ou sincrona (quando esperado o resultado). Por Default é true.
+        async: true, // Se a requisição vai ser assincrona (quando não esperado o resultado) ou sincrona (quando esperado o resultado). Por Default é true.
         success: function (data) { // Sucess é uma função que será executada, por CallBack caso tenha sucesso.
             PreencheEndereco(data);
         },
