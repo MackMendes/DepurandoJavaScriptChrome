@@ -1,11 +1,11 @@
 ﻿// 1ª JS
 
-// jQuery = $
+// $ = jQuery
 // Função ready do Jquery, executa a função que recebe, após o navegador carregar (renderizar) toda a página
-jQuery(document).ready(function () {
+$(document).ready(function () {
     // debugger: uma palavra reservada do JavaScript para debugar o código. Quando o Navegador estiver com o Console (f12) aberto, vai parar a interpretação
     // do código quando encontrar esse comando.
-    //debugger;
+    debugger;
     ExecutarTodasFuncoes();
 });
 
