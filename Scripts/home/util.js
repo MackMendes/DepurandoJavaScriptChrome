@@ -11,8 +11,8 @@ $(document).ready(function () {
 
 // $(function() {});
 
-// Função Nomeada (SetYearFooter)
-function AtribuirAnoFooter() {
+// Função Nomeada (AtribuirAnoRodape)
+function AtribuirAnoRodape() {
     // Quando for pegar um elemento HTML por ID, utiliza-se '#' na frente e o ID do elemento
     // Por boa prática, utiliza-se '$' na frente da variável que for armazenar um objeto Jquery
     var $lblFooter = $('#lbltimeNow');
@@ -26,7 +26,7 @@ function AtribuirTituloPagina() {
 }
 
 function ExecutarTodasFuncoes() {
-    AtribuirAnoFooter();
+    AtribuirAnoRodape();
     AtribuiOnBlurCep();
     AtribuirTituloPagina();
 }
